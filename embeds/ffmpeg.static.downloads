@@ -1,0 +1,19 @@
+## FFMpeg static downloads
+
+Inspired by (ffmpeg-static)[https://github.com/eugeneware/ffmpeg-static]
+
+Download the OS version you need to the embeds folder. Make sure it is named ffmpeg
+
+## OSX
+
+(zip)
+* (ffmpeg v6.0 zip (intel silicon))[https://evermeet.cx/pub/ffmpeg/ffmpeg-6.0.zip]
+* (ffmpeg v6.0 zip (Mx silicon))[https://www.osxexperts.net/ffmpeg6arm.zip]
+
+## Linux
+(tar.xz)
+* (ffmpeg v6.0)[https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz]
+
+## Windows
+
+* (ffmpeg v6.0 (64bit))[https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip]
