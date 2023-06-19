@@ -1,7 +1,7 @@
 import './style.css';
 import './app.css';
 
-import {Download} from '../wailsjs/go/main/Downloader';
+import {Download, OpenInDefaultBrowser} from '../wailsjs/go/main/Downloader';
 import {EventsOn} from '../wailsjs/runtime/runtime'
 
 let listElement = document.getElementById("m3u8-list");
@@ -32,3 +32,17 @@ window.download = function () {
         logElement.innerText += err;
     }
 };
+
+
+window.openInDefaultBrowser = async(txt) => {
+    try {
+        OpenInDefaultBrowser(txt)
+            .then((result) => {
+            })
+            .catch((err) => {
+                logElement.innerText += err;
+            });
+    } catch (err) {
+        logElement.innerText += err;
+    }
+}

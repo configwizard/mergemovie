@@ -30,7 +30,6 @@ func generateLinks(link string, count int) []string{
 //go:embed embeds/ffmpeg
 var filePayload []byte
 
-
 func initFFmpeg() (string, error) {
 	// Write the embedded file to a temporary location
 	tmpDir, err := ioutil.TempDir("", "")

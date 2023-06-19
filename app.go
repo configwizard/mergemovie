@@ -2,11 +2,14 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"github.com/canhlinh/hlsdl"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 	"io"
 	"os"
+	"os/exec"
 	"path/filepath"
+	rt "runtime"
 	"strings"
 )
 
@@ -27,6 +30,21 @@ func NewDownloader(ffmpegPath string) *Downloader {
 	return &Downloader{
 		ffmpegPath: ffmpegPath,
 	}
+}
+
+func (d Downloader) OpenInDefaultBrowser(txt string) error {
+	var err error
+	switch rt.GOOS {
+	case "linux":
+		err = exec.Command("xdg-open", txt).Start()
+	case "windows":
+		err = exec.Command("rundll32", "url.dll,FileProtocolHandler", txt).Start()
+	case "darwin":
+		err = exec.Command("open", txt).Start()
+	default:
+		err = fmt.Errorf("unsupported platform")
+	}
+	return err
 }
 
 // startup is called when the app starts. The context is saved

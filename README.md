@@ -1,19 +1,21 @@
-# README
+# MergeMovie
 
 ## About
 
-This is the official Wails Vanilla template.
+This is a little app to make downloading videos from websites a breeze. In the simplest for, a video will just be a link to the mp4/avi etc on the site. In that case you can just go to that URL and download that video.
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+However longer videos or a lot of streaming sites will use (m3u8)[https://en.wikipedia.org/wiki/M3U] format and (transport stream)[https://en.wikipedia.org/wiki/MPEG_transport_stream] files. 
 
-## Live Development
+In short an m3u8 file holds the link/path to the ts files. The ts files together make up the whole video.
 
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
+If you can find these and stitch them together, then you can download the whole video.
 
-## Building
+## Usage
 
-To build a redistributable, production mode package, use `wails build`.
+You can watch the video (here)[https://youtu.be/4s7Q5m4Ma_4] however in short, you just need to find the m3u8 file from the network tab in Chrome/browser (right click, inspect -> network tab), filter by `m3u8` and refresh the page. Look for the m3u8 file that contains a load of .ts files. Copy the m3u8 path and paste into MergeMovie.
+
+Click Download
+
+Choose a file name and location to save it
+
+Done.
