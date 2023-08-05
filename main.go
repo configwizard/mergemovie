@@ -19,7 +19,7 @@ import (
 //go:embed all:frontend/dist
 var assets embed.FS
 
-func generateLinks(link string, count int) []string{
+func generateLinks(link string, count int) []string {
 	var links []string
 	for i := 1; i <= count; i++ {
 		links = append(links, fmt.Sprintf(link, i, i))
@@ -43,9 +43,10 @@ func initFFmpeg() (string, error) {
 	}
 	return tmpFn, nil
 }
+
 func executeFFmpeg(ffmpeg, tsFile, outputFile string, logWriter io.Writer) (string, error) {
 
-	cmd := exec.Command(ffmpeg, "-y", "-i", tsFile, "-c:v", "libx264", "-c:v", "copy", outputFile + ".mp4")
+	cmd := exec.Command(ffmpeg, "-y", "-i", tsFile, "-c:v", "libx264", "-c:v", "copy", outputFile+".mp4")
 	cmd.Stdout = logWriter
 	cmd.Stderr = logWriter
 	if err := cmd.Run(); err != nil {
@@ -65,7 +66,9 @@ func gracefulShutdown(ffmpegPath string) {
 		os.Exit(0)
 	}()
 }
+
 func main() {
+
 	ffmpegPath, err := initFFmpeg()
 	if err != nil {
 		panic(err)
