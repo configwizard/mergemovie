@@ -4,26 +4,34 @@
     margin: 1.5rem auto;
 }
 
+.input-box {
+    margin: 20px 0;
+}
+
 #m3u8-list {
     width: 80%;
+    margin-bottom: 10px;
 }
-.input-box .btn {
+
+.btn {
     width: 80%;
     height: 30px;
     line-height: 30px;
     border-radius: 3px;
     border: none;
-    margin: 0 0 0 20px;
-    padding: 0 8px;
+    background-color: #cfd9df;
     cursor: pointer;
+    display: block;
+    margin: auto;
 }
 
-.input-box .btn:hover {
+.btn:hover {
     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
     color: #333333;
 }
 
-.input-box .input {
+.input {
+    width: 80%;
     border: none;
     border-radius: 3px;
     outline: none;
@@ -31,27 +39,83 @@
     line-height: 30px;
     padding: 0 10px;
     background-color: rgba(240, 240, 240, 1);
+    margin: auto;
+    display: block;
     -webkit-font-smoothing: antialiased;
 }
 
-.input-box .input:hover {
+.input:hover, .input:focus {
     border: none;
     background-color: rgba(255, 255, 255, 1);
 }
-
-.input-box .input:focus {
-    border: none;
-    background-color: rgba(255, 255, 255, 1);
+#content-area {
+    display: flex;
 }
 
 .logs {
+    flex: 2; /* Adjust as needed to control the relative widths */
     text-align: left;
-    font-family:courier, courier new, serif;
+    font-family: courier, courier new, serif;
     color: darkgreen;
     background-color: #ddd;
     padding: 3px;
-    height: 60vh;
     overflow: auto;
     display: flex;
     flex-direction: column-reverse;
+    min-height: 100px; /* Adjust as needed */
+    /* Other existing styles */
+    max-height: calc(100vh - 200px); /* Adjust the subtraction value based on other elements' heights */
+    overflow-y: auto;
+}
+#notifications {
+    flex: 1; /* Adjust as needed to control the relative widths */
+    overflow-y: auto;
+    padding: 10px;
+    min-height: 100px; /* Same as the logs' min-height */
+    border: 2px solid #cfd9df; /* Adjust the color, width, and style as desired */
+}
+.notification {
+    border: 1px solid #cfd9df;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #cfd9df;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.notification button {
+    background-color: #cfd9df;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #333333;
+}
+
+.notification button:hover {
+    background-color: #e2ebf0;
+}
+.variants-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.variant {
+    flex-basis: calc(33% - 10px); /* For 3 per row, use 50% for 2 per row */
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    text-align: center;
+}
+.success-notification {
+    color: #fff;
+    background-color: #28a745; /* A shade of green */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
 }

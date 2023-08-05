@@ -1,10 +1,11 @@
-module changeme
+module github.com/amlwwalker/video-stream-downloader
 
 go 1.18
 
 require (
 	github.com/canhlinh/hlsdl v0.0.0-20230412042136-7c990fdd2b7b
 	github.com/wailsapp/wails/v2 v2.5.1
+	golang.org/x/net v0.7.0
 )
 
 require (
@@ -31,7 +32,6 @@ require (
 	github.com/wailsapp/mimetype v1.4.1 // indirect
 	golang.org/x/crypto v0.1.0 // indirect
 	golang.org/x/exp v0.0.0-20220303212507-bbda1eaf7a17 // indirect
-	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/sys v0.5.0 // indirect
 	golang.org/x/text v0.7.0 // indirect
 	gopkg.in/cheggaaa/pb.v1 v1.0.28 // indirect

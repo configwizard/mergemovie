@@ -12,7 +12,13 @@ If you can find these and stitch them together, then you can download the whole 
 
 ## Usage
 
-You can watch the video (here)[https://youtu.be/4s7Q5m4Ma_4] however in short, you just need to find the m3u8 file from the network tab in Chrome/browser (right click, inspect -> network tab), filter by `m3u8` and refresh the page. Look for the m3u8 file that contains a load of .ts files. Copy the m3u8 path and paste into MergeMovie.
+You can watch the video (here)[https://youtu.be/4s7Q5m4Ma_4] however
+
+1. You can provide the URL of the page that contains the video and MergeMovie will find and detect the available video qualities to download
+
+Click Download, choose a quality and wait for success
+
+2. you just need to find the m3u8 file from the network tab in Chrome/browser (right click, inspect -> network tab), filter by `m3u8` and refresh the page. Look for the m3u8 file that contains a load of .ts files. Copy the m3u8 path and paste into MergeMovie.
 
 Click Download
 
