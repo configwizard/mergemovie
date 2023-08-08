@@ -1,5 +1,8 @@
 # MergeMovie
 
+<img width="1136" alt="image" src="https://github.com/configwizard/mergemovie/assets/2920180/0eda730a-d384-4e0a-bb47-a50d6a828a48">
+
+
 ## About
 
 This is a little app to make downloading videos from websites a breeze. In the simplest for, a video will just be a link to the mp4/avi etc on the site. In that case you can just go to that URL and download that video.
